@@ -1,7 +1,7 @@
 <template>
   <div class="content_placeholder">
-    <!-- <Banner></Banner>
-    <About></About> -->
+    <Banner></Banner>
+    <About></About>
   </div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-    <section class="view_container">
+    <section class="view_container" id="about">
         <div class="r_container">
             <div class="r_title_box">
                 <h2 class="r_title" v-html="about.title">{</h2>

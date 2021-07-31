@@ -17,7 +17,9 @@ export default {
     },
     methods: {
         closeNav() {
-            this.$emit('toggleClose')
+            if(!this.$userAgent.agent()) {
+                this.$emit('toggleClose')
+            }
         }
     }
 }

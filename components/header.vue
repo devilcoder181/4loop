@@ -1,10 +1,10 @@
 <template>
-    <header>
+    <header id="header" :class="{'scrolled': scrollClass}" >
         <div class="r_container">
             <div class="nav_logo">
-              <!-- <nuxt-link to="/" class="nav_logo_link">
+              <nuxt-link to="/" class="nav_logo_link">
                 <nuxt-img src="/logo.svg" alt="4LOOP Electromechanical"/>
-              </nuxt-link> -->
+              </nuxt-link>
             </div>
 
             <div class="nav_group">
@@ -47,12 +47,20 @@
           {hash: '#assistance', name: 'Assistance'},
           {hash: '#contact', name: 'Contact'},
         ],
-        showMenu: true
+        showMenu: true,
+        scrollClass: false
       }
     },
     methods: {
       openMenu() {
         this.showMenu = !this.showMenu
+      },
+      updateScroll() {
+        if(window.scrollY > 150){
+          this.scrollClass = true
+        }else{
+          this.scrollClass = false
+        }
       },
     },
     mounted() {
@@ -61,17 +69,36 @@
       }else{
         this.showMenu = false
       }
+
+      window.addEventListener('scroll', this.updateScroll);
     }
   }
 </script>
 
 <style lang="scss">
 header{
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   display: block;
   height: 12.5vh;
   padding: 1.5rem 0;
+  z-index: 99;
+  transition: all 0.6s ease;
+
+  @media only screen and (max-width:767px) {
+    height: 10vh;
+  }
+
+  &.scrolled {
+    height: 8.5vh;
+    padding: 1rem 0;
+    background: $color-white;
+    box-shadow: 1px 1px 10px #0000001f;
+  }
+
+  
 
   .r_container{
     position: relative;
