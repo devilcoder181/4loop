@@ -1,0 +1,41 @@
+@mixin smText2 {
+    font-size: 1vw;
+    font-weight: 400;
+
+    @media only screen and (max-width:1200px){
+      font-size: 2vw;
+    }
+
+    @media only screen and (max-width:767px){
+      font-size: 3.5vw;
+    }
+}
+
+@mixin mdText {
+    font-size: 1.25vw;
+    font-weight: 500;
+
+    @media only screen and (max-width:1200px){
+      font-size: 2.25vw;
+    }
+
+    @media only screen and (max-width:767px){
+      font-size: 3.75vw;
+    }
+}
+
+@mixin mdText2 {
+    font-size: 1.75vw;
+    @media only screen and (max-width:1200px){
+      font-size: 2.75vw;
+    }
+
+    @media only screen and (max-width:767px){
+      font-size: 4.75vw;
+    }
+}
+
+@mixin  gradient {
+    background: $color-primary;
+    background: linear-gradient(145deg, $color-primary 0%, $color-secondary 100%);
+}

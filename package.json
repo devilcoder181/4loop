@@ -1,0 +1,28 @@
+{
+  "name": "4loop",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "swiper": "^6.3.5",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-in-viewport-directive": "^2.0.2"
+  },
+  "devDependencies": {
+    "@nuxt/image": "^0.4.14",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "fibers": "^5.0.0",
+    "node-sass": "^6.0.0",
+    "sass": "^1.32.8",
+    "sass-loader": "^10.2.0"
+  }
+}

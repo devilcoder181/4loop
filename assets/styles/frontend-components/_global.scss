@@ -1,0 +1,101 @@
+html {
+  box-sizing: border-box;
+  font-size: 17px;
+    @media screen and (max-width:991px){
+        font-size: 14px;
+    }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body{
+    font-family: $font-primary;
+    font-size: 16px;
+    font-size: 100%;
+    font-weight: 300;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin: 0;
+    padding: 0;
+    color: $color-text;
+}
+
+h1, h2, h3, h4, h5, h6{
+
+    font-family: $font-primary;
+    font-weight: bold;
+}
+
+.r_container{
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width:1024px){
+    width: 100%;
+    max-width: 87.5%;
+  }
+
+  @media screen and (max-width:1024px){
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+ul,ol{
+  position: relative;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a{
+  position: relative;
+  text-decoration: none;
+  color: $color-black;
+}
+
+
+.view_container {
+  position: relative;
+  width: 100%;
+  padding: 6.5vw 0;
+
+  @media only screen and (min-width:768px) and (max-width:1200px){
+    padding: 10vw 0;
+  }
+
+  @media only screen and (max-width:767px){
+    padding: 15vw 0;
+  }
+
+}
+
+.r_title_box{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+
+  .r_title{
+    position: relative;
+    display: block;
+    margin: 0;
+    font-size: 3vw;
+
+    @media only screen and (max-width:1200px){
+      font-size: 5vw;
+    }
+
+    @media only screen and (max-width:767px){
+      font-size: 7vw;
+    }
+
+    span{
+      color: $color-primary;
+    }
+  }
+}
